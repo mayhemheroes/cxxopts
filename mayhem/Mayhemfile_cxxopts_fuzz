@@ -1,0 +1,9 @@
+project: cxxopts
+target: cxxopts_fuzz
+cmds:
+  - cmd: /mayhem/cxxopts_fuzz
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/cxxopts_fuzz.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cxxopts_fuzz/testsuite

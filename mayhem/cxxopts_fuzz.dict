@@ -1,0 +1,17 @@
+# libFuzzer dictionary for the cxxopts parser harness (test/fuzz.cpp).
+# The harness feeds FuzzedDataProvider bytes that become option names + a synthetic argv; these
+# tokens steer mutation toward the argv shapes cxxopts' parser branches on (long/short flags, the
+# "=" inline value, the "--" end-of-options marker, grouped short flags, list separators).
+"--"
+"-"
+"="
+"--help"
+"--version"
+"-h"
+"-v"
+",-"
+"--opt="
+"-abc"
+"--no-"
+"true"
+"false"
